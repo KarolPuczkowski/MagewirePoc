@@ -1,0 +1,4 @@
+<div x-data="{ bar: $wire.entangle('bar') }">
+    <input type="text" x-model="bar">
+    <button @click="$wire.setBar(bar)">Set</button>
+</div>

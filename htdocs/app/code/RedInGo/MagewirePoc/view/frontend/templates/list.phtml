@@ -1,0 +1,15 @@
+<?php
+    $items= ["one","two","three"];
+?>
+<div>
+    <ul>
+        <?php foreach($items as $item):?>
+            <li>
+                <h2><?=$item?></h2>
+                <?php if ($block->getChildBlock('item')): ?>
+                    <?= $block->getChildBlock('item')->toHtml() ?>
+                <?php endif; ?>
+            </li>
+        <?php endforeach;?>
+    </ul>
+</div>
